@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game Thingy</title>
+    <link rel="stylesheet" href="game thingy.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/game thingy/favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div align="center"><img src="logo.png" alt="the logo haha" height="350px"></div>
+    <table align="center">
+        <tr>
+            <td>Enemy health</td>
+            <td style="color: black;">hellotraveler</td>
+            <td>Your health</td>
+        </tr>
+        <tr align="center">
+            <td id="enemy">100</td>
+            <td style="color: black;">:)</td>
+            <td id="player">100</td>
+        </tr>
+    </table>
+    <br />
+    <table align="center">
+        <tr>
+            <td>
+                <div align="center" id="button"><button onclick="myFunction()" id="button"
+                        data-target="eA">attack</button></div>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div align="center"><button onclick="potion255()" id="potion25">Heal 25 (5)</button></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div align="center" id="enemyAttacked" style="display: none; color: white;">The enemy has attacked you!</div>
+            </td>
+        </tr>
+    </table>
+    <script>
+
+        function myFunction() {
+            var a = document.getElementById("button")
+            if (x.innerHTML === x.innerHTML) {
+                x.innerHTML = attackEnemy;
+                fade_in();
+
+            }
+        }
+
+        function fade_in() {
+            "#enemyAttacked".fadeIn().delay(1000).fadeOut();
+        }
+
+        function potion255() {
+            var x = document.getElementById("potion25");
+            if (x.innerHTML === "Heal 25 (5)") {
+                x.outerHTML = `<button onclick="potion254()" id="potion25">Heal 25 (4)</button>`;
+            }
+        }
+        function potion254() {
+            var x = document.getElementById("potion25");
+            if (x.innerHTML === "Heal 25 (4)") {
+                x.outerHTML = `<button onclick="potion253()" id="potion25">Heal 25 (3)</button>`;
+            }
+        }
+        function potion253() {
+            var x = document.getElementById("potion25");
+            if (x.innerHTML === "Heal 25 (3)") {
+                x.outerHTML = `<button onclick="potion252()" id="potion25">Heal 25 (2)</button>`;
+            }
+        }
+        function potion252() {
+            var x = document.getElementById("potion25");
+            if (x.innerHTML === "Heal 25 (2)") {
+                x.outerHTML = `<button onclick="potion251()" id="potion25">Heal 25 (1)</button>`;
+            }
+        }
+        function potion251() {
+            var x = document.getElementById("potion25");
+            if (x.innerHTML === "Heal 25 (1)") {
+                x.outerHTML = "";
+            }
+        }
+
+        var x = document.getElementById("enemy");
+        var xx = x.innerHTML
+        var xxx = x.innerHTML - 10
+        var y = document.getElementById("player");
+        var yy = y.innerHTML
+        var yyy = y.innerHTML - 10
+        var z = document.getElementById("enemyAttacked");
+        var zz = z.innerHTML
+        var ba = document.getElementById("button")
+        var attackEnemy = Math.floor(Math.random() * (xx - xxx + 1) + xxx);
+        var enemyAttack = Math.floor(Math.random() * (yy - yyy + 1) + yyy);
+
+    </script>
+</body>
+
+</html>
