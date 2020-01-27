@@ -17,6 +17,7 @@ function fade_in() {
 }
 function fade_in2() {
     var v = document.getElementById("enemyAttacked1");
+    var q = document.getElementById("enemyAttacked");
     if (q.outerHTML === q.outerHTML) {
         v.outerHTML = `<div align="center" style="display: none; color: white;">The enemy has attacked you!</div>`;
     }
