@@ -1,4 +1,4 @@
-
+//-    -
 function myFunction() {
     if (x.innerHTML === x.innerHTML) {
         x.innerHTML = attackEnemy;
@@ -18,8 +18,12 @@ function fade_in() {
 function fade_in2() {
     var v = document.getElementById("enemyAttacked1");
     var q = document.getElementById("enemyAttacked");
-    if (q.outerHTML === q.outerHTML) {
-        v.outerHTML = `<div align="center" style="display: none; color: white;">The enemy has attacked you!</div>`;
+    var vv = document.getElementById("enemyAttacked1");
+    var qq = document.getElementById("enemyAttacked");
+    if (v.innerHTML === 'The enemy has attacked you!') {
+        setTimeout(function () { v.outerHTML = `<div id="enemyAttacked1" align="center" style="color: white;">The enemy has attacked you!</div>`; }, 1000);
+        setTimeout(function () {document.getElementById("enemyAttacked").outerHTML = `<td id="enemyAttacked"><div align="center" display="none" color: white;">You have attacked the enemy!</div></td>`; }, 2000);
+        setTimeout(function () {document.getElementById("enemyAttacked1").outerHTML = `<div id="enemyAttacked1" align="center" display="none" style="color: white;">The enemy has attacked you!</div>`; }, 2000);
     }
 }
 
